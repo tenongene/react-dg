@@ -1,5 +1,10 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100vh;
+  justify-content: space-between;
+
 }
 
 .App-logo {
@@ -35,4 +40,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  background-color: darkslategray;
+  color: aliceblue;
+  padding-top: 20px;
+}
+
+footer p {
+    display: block;
+    padding-bottom: 15px;
+
+}
+
+header {
+  background-color: darkslategray;
+  color:aliceblue;
+  padding-bottom: 20px;
+  margin-bottom:10px;
+}
+
+main {
+  font-size: 25px;
+  height: 100%;
 }

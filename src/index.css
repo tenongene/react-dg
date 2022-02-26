@@ -1,13 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: 'Lato', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+	padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before {
+	content: '\200B';
+}
+
+.item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	margin: 0.25rem 0;
+	background-color: #eee;
+}
+
+.item:first-child {
+	margin: 0;
+}
+
+.item input[type='checkbox'] {
+	text-align: center;
+	width: 2.5rem;
+	width: 48px;
+	min-width: 48px;
+	height: 2.5rem;
+	height: 48px;
+	min-height: 48px;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	background: none;
+}
+
+.item input[type='checkbox']:focus + label {
+	text-decoration: underline;
+}
+
+.item > label {
+	font-size: 1.3rem;
+	flex-grow: 1;
+	color: black;
+}
+
+.item svg {
+	width: 48px;
+	min-width: 48px;
+	height: 36px;
+	font-size: 1rem;
+	color: rgb(47, 112, 66);
+	cursor: pointer;
+}
+
+.item svg:focus,
+.item svg:hover {
+	color: red;
+	outline: none;
+}
+
+.addForm {
+	display: flex;
+	gap: 0.5rem;
+	position: relative;
+	height: 50px;
+	margin: 10px 10px;
+}
+
+.label {
+	position: absolute;
+	transform: translateX(-200%);
+}
+
+.addForm > button {
+	width: 45px;
+	font-size: 1.5rem;
+	color: rgb(10, 143, 10);
+	cursor: pointer;
+}
+
+.addForm > button:hover {
+	background-color: green;
+	color: aliceblue;
+	border: none;
+	border-radius: 3px;
+}
+
+.addForm > input {
+	padding: 20px 20px;
+	border: 1px solid;
+	border-radius: 7px;
+	flex-grow: 1;
+	font-size: 1.3rem;
+}
+
+.addForm > input:focus {
+	border: 2px solid black;
+}
+
+::placeholder {
+	color: rgb(187, 187, 187);
+}
+
+.searchForm {
+	display: flex;
+}
+
+.searchForm > input {
+	width: 95%;
+	padding: 12px 12px;
+	border: 1px solid;
+	border-radius: 7px;
+	font-size: 1.3rem;
+	flex-grow: 1;
+	margin-left: 12px;
+	margin-right: 12px;
 }
