@@ -90,6 +90,7 @@ function App() {
 		const reqUrl = `${API_URL}/${id}`;
 		const result = await apiRequest(reqUrl, deleteOptions);
 		if (result) setFetchError(result);
+        
 	};
 
 	//submit (new item) handler
